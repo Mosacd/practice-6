@@ -1,0 +1,151 @@
+html{
+    font-size: 15px;
+  }
+  
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body{
+      font-family: 'Poppins';
+    }
+  
+    h1,h2{
+      color: hsl(234, 12%, 34%);
+    }
+  
+    p{
+    color:  hsl(229, 6%, 66%);
+    }
+  
+    #header1{
+      font-weight: 200;
+      font-size: 1.6rem;
+    }
+  
+    #header2{
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+  
+    header{
+      margin: auto;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 80px;
+      max-width: 630px;
+    }
+  
+    #headerp{
+      padding: 0 30px;
+    }
+  
+    #wrapper{
+      margin: auto;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: minmax(0,450px);
+      gap: 30px;
+      margin-bottom: 100px;
+      justify-content: center;
+      padding: 10px;
+    }
+    #wrapper>div{
+      cursor: pointer;
+      width: 85%;
+      justify-self: center;
+      box-shadow: -10px 0 10px -10px hsla(229, 6%, 66%, 0.312), 10px 0 10px -10px hsla(229, 6%, 66%, 0.312), 0 10px 10px  hsla(229, 6%, 66%, 0.312);
+      border-top: 4px solid;
+      border-radius: 6px;
+      padding: 1.6rem;
+    }
+  
+    #wrapper>div:hover{
+      background-color: rgba(210, 204, 204, 0.232);
+    }
+  
+    #wrapper>div>p{
+      font-size: 0.91rem;
+      margin-bottom: 2rem;
+    }
+  
+    #wrapper>div>svg{
+      float: right;
+    }
+  
+    h2{
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+  
+   #wrapper>#card1{
+      border-color: hsl(180, 62%, 55%);
+    }
+    #wrapper>#card2{
+      border-color: hsl(0, 78%, 62%);
+    }
+    #wrapper>#card3{
+      border-color: hsl(34, 97%, 64%);
+    }
+    #wrapper>#card4{
+      border-color: hsl(212, 86%, 64%);
+    }
+  
+    @media screen and (min-width:1000px) {
+  
+      html{
+        font-size: 16px;
+      }
+      #header1,#header2{
+        font-size: 1.8rem;
+      }
+      #wrapper{
+        padding: 0 100px;
+        grid-template-columns: repeat(2, minmax(auto, 400px));
+        grid-template-rows: repeat(2, 1fr);
+        
+        grid-template-areas:
+      'card1 card3'
+      'card2 card4';
+      align-items: center;
+      }
+      #wrapper>div{
+        width: 100%;
+        height: 100%;
+      }
+      #card1{
+        grid-area: card1;
+      }
+      #card2{
+        grid-area: card2;
+      }
+      #card3{
+        grid-area: card3;
+      }
+      #card4{
+        grid-area: card4;
+      }
+  }
+  
+  @media screen and (min-width:1300px) {
+      html{
+        font-size: 17px;
+      }
+      #wrapper>div{
+        height: auto;
+      }
+      #wrapper{
+        padding: 0 100px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+      'card1 card2 card4'
+      'card1 card3 card4';
+      align-items: center;
+      }
+     
+  }
